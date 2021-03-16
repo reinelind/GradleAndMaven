@@ -1,0 +1,4 @@
+main/java/com/builders/admin/AdminEntryPoint.java
+ com.builders.admin.AdminEntryPoint
+test/java/com/builders/admin/AdminEntryPointTest.java
+ com.builders.admin.AdminEntryPointTest

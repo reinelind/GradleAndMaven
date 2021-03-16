@@ -1,0 +1,23 @@
+plugins {
+    id 'war'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'junit:junit:4.12'
+    compile 'org.apache.tomcat:tomcat-servlet-api:9.0.37'
+    compile project (":services")
+    compile project (":utils")
+}
+
+war {
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+
